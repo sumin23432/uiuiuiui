@@ -1,0 +1,91 @@
+@media only screen and (max-width: 800px){
+    .header .main-menu{
+        display: none;
+    }
+
+    .mobile-view{
+        display: inherit;
+    }
+
+    .mobile-hidden{
+        display:none;
+    }
+
+    .header{
+        width: 100%;
+        padding-top: 11px;
+        border-bottom:none;
+        height: 40px;
+    }
+
+    .header .logo-section{
+        left:15px;
+        top:17px;
+    }
+
+    .header .logo-section img{
+        width: 84px;
+    }
+
+    .header .page-title{
+        left:110px;
+        padding-left: 15px;
+        font-size:13px;
+        margin-top: 6px;
+    }
+
+    .header .mobile-menu{
+        position: absolute;
+        right:15px;
+        top:14px;
+    }
+    
+   
+
+    .fiter-section{
+        border-top:1px solid #efefef;
+        height: 40px;
+        z-index:10;
+    }
+
+    .filter-section .filter-deco{
+        display:none;
+    }
+
+    .filter-section .filter-item{
+        font-size: 11px;
+        line-height: 40px;
+        width: 80px;
+    }
+
+    .filter-section .filter-item .select-box{
+        top:40px;
+    }
+
+    .filter-section .filter-item .select-box region-select-box{
+        width:100vw;
+    }
+
+    .filter-section .filter-item .select-box li{
+        width:80px;
+    }
+
+    .biggest{
+        display: flex;
+        align-items: center;
+        min-width: 340px;
+        justify-content: center;
+    }
+    .recruit-item-section{
+        width: 100%;
+        align-items: center;
+        min-width: 340px;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+
+   
+
+    
+    
+}

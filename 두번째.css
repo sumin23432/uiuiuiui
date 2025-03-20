@@ -1,0 +1,307 @@
+body{
+    font-family: 'NanumSquare', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #3c3c3c;
+    margin: 0px 20px;
+    padding: 0px;
+}
+
+ul, li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    color:#3c3c3c;
+    text-decoration: none;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 48px;
+    padding-top: 25px;
+    font-weight: 700;
+    color: #3c3c3c;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.header .logo-section{
+    position: absolute;
+    left: 30px;
+    top: 29px;
+    z-index: 5;
+    width: 105px;
+}
+
+.header .logo-section img{
+    width:100%;
+}
+
+.header .page-title{
+    position: absolute;
+    left: 170px;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+    line-height: 20px;
+    margin-top: 3px;
+    color: #b1b1b1;
+}
+
+.header .main-menu{
+    position: absolute;
+    right:0px;
+}
+
+.header .main-menu ul li{
+    margin: 0px 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.header .main-menu ul li .login-menu{
+    border-left: 1px solid #ddd;
+    padding-left: 30px;
+}
+
+.filter-section{
+    position: relative;
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 53px;
+    display:flex;
+    border-bottom: 1px solid #EFEFEF;
+    background-color: #ffffff;
+}
+
+.filter-section .filter-deco{
+  
+    display:  flex;
+    align-content: center;
+    justify-content: center;
+    border-right: 1px solid #efefef;
+}
+
+.filter-section .filter-deco img {
+    
+    height: 24px;
+    width:  24px;
+    padding: 15px;
+}
+
+.filter-section .filter-item{
+    line-height: 160%;
+    font-size: 14px;
+    border-right: 1px solid #efefef;
+    font-weight: 700;
+    text-align: center;
+    cursor:pointer;
+
+}
+
+.filter-section .filter-item img{ 
+    margin-left:7px;
+    vertical-align:middle;
+    /*인라인(inline) 요소나 테이블 셀에서 수직 정렬을 맞출 때  
+    기본적으로 img는 텍스트보다 살짝 아래쪽에 위치하는데,
+    vertical-align: middle;을 사용하면 텍스트 중앙에 맞춰짐
+    display: flex;를 사용할 때는 align-items: center;를 써야 함. */
+}
+
+
+
+.filter-box {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+    z-index: 99;
+}
+
+.filter-section .filter-box .filter-item{
+    width: 110px;
+    line-height: 53px;
+    font-size: 14px;
+    border-right: 1px solid #efefef;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-section .filter-box .filter-item .select-box{
+    position: absolute;
+    top: 54px;
+    left: -11px;
+    background-color: #fff;
+    width:120px;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    border-bottom:1px solid #efefef;
+    font-weight: 400;
+    flex-wrap: wrap;
+    /*반응형일때 넣어주면 정리됨*/
+    display: none;
+    
+}
+
+.filter-section .filter-box .filter-item .select-box .region-select-box{
+    width:330px;
+}
+
+.filter-section .filter-box .filter-item .select-box li{
+    width:110px;
+}
+
+.filter-section .filter-box .filter-item:hover .select-box{
+    display: flex;
+}
+
+.biggest{
+    display: flex; /* flexbox 사용 */
+    flex-wrap: wrap; /* 화면 끝에 닿으면 다음 줄로 넘어감 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    gap: 20px; /* 아이템 사이의 간격 */ 
+}
+.recruit-item-section{
+    background-color:#fafafa;
+    text-align: center;
+    padding: 15px 0px 50px;
+    width: calc(25% - 20px);/* 4개씩 나열 (간격 고려) */
+}
+
+.recruit-item-section .recruit-item{
+    position: relative;
+    height: 378px;
+    padding: 20px 15px;
+    background-color: #ffffff;
+    text-align: left;
+    box-shadow: 0px 0px 30px #eee;
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+    height: 500px;
+}
+
+.recruit-item-section .recruit-item .rc-img{
+    height: 200px;
+    position: relative;
+    transition-duration: 0.2s;
+    background-position: center center;
+    background-size: 100%;
+    cursor:pointer;
+}
+
+.recruit-item-section .recruit-item:hover .rc-img{
+    background-size: 110%;
+}
+
+.recruit-item-section .recruit-item:hover .rc-img:after{
+    content: '';
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.recruit-item-section .recruit-item .rc-img .more-bt{
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    left:50%;
+    margin-top: -20px;
+    margin-left: -65px;
+    width: 136px;
+    height: 35px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 160%;
+    display: flex; /* flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    background: #ffffff;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #565656;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    /* 투명도 0*/
+    /* pointer-events: none; 클릭 막으려면 */
+    transition-duration: 0.2s;
+}
+
+.recruit-item-section .recruit-item:hover .rc-img .more-bt{
+    opacity: 1;
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-title{
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 160%;
+    margin-top: 20px;
+    cursor:pointer;
+    white-space: nowrap; /* 줄 바꿈 금지 */
+    overflow: hidden;
+    text-overflow: ellipsis;/* "..." 말줄임 표시 */
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-subinfo img{
+    vertical-align: middle;
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-subinfo .rc-comment{
+    margin-left: 10px;
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-subinfo .rc-comment img{
+    margin-top:-2px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* "..."로 대체 */
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-desc{
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 5px;
+    color: #707070;
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-bottom{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 0px;
+    bottom: 23px;
+    
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-bottom .rc-favorite{
+    position:absolute;
+    right: 28px;
+    top: 6px;
+    cursor:pointer;
+    top: 50%;         /* 부모의 50% 지점으로 이동 */
+    transform: translateY(-50%);  /* 자기 크기의 50%만큼 위로 이동 */
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-subinfo{
+    font-size:14px;
+    color: #757575;
+    margin: 5px 0px 20px 0px;
+}
+
+.recruit-item-section .recruit-item .rc-contents .rc-bottom .rc-time{
+    position: absolute;
+    left:15PX;
+    top: 50%;         /* 부모의 50% 지점으로 이동 */
+    
+    transform: translateY(-50%);  /* 자기 크기의 50%만큼 위로 이동 */
+}
+
+
+
